@@ -16,6 +16,12 @@ class NoteListDataSource: BaseDataSource, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(NoteCollectionViewCell.self)", for: indexPath)
+        
+        if let currentCell = cell as? NoteCollectionViewCell, let cellData =  getObjectAt(index: indexPath.row) as? Note {
+            currentCell.setup(cellData: cellData)
+            return currentCell
+        }
+        return cell
     }
 }

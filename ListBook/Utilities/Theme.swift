@@ -42,14 +42,14 @@ enum AppTheme {
     }
     var collectionViewBackground: UIColor {
         if #available(iOS 13.0, *) {
-              return .systemBackground
+              return .secondarySystemBackground
           } else {
               return .white
           }
     }
     var collectionCellBackground: UIColor {
         if #available(iOS 13.0, *) {
-              return .tertiarySystemBackground
+              return .systemBackground
           } else {
               return .white
           }
@@ -64,14 +64,12 @@ enum AppTheme {
     }
     var wrapperBackground: UIColor {
         if #available(iOS 13.0, *) {
-              return .lightGray
+            return .label
           } else {
-              return .lightGray
+              return .darkText
           }
     }
-    var defaultButtonColor: UIColor {
-        return UIColor(red:1.00, green:0.66, blue:0.00, alpha:1.0)
-    }
+
     var buttonBackgroundColor: UIColor {
         return UIColor(red:0.00, green:0.70, blue:1.00, alpha:1.0)
     }

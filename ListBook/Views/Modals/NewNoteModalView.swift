@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NewNoteModalView: UIView {
     
@@ -64,13 +65,14 @@ class NewNoteModalView: UIView {
     
     func toggleModal() {
         
-        if self.wrapperView.alpha == 1 {
+        if self.contentView.alpha == 1 {
             UIView.animate(withDuration: 0.2, animations: {
                 self.wrapperView.alpha = 0
                 self.contentView.alpha = 0
 
             }) { (isDone) in
                 if isDone {
+                    self.continueButton.hideLoading()
                     self.removeFromSuperview()
                 }
             }
@@ -133,11 +135,27 @@ class NewNoteModalView: UIView {
 }
 extension NewNoteModalView {
     @objc private func validateAndSaveNewNote() {
+        continueButton.displayLoading()
         nameField.validateEntry()
         descField.validateEntry()
         
         if nameField.isValid() && descField.isValid() {
-    
+            
+            if let nameStr = nameField.text {
+                let newNote = Note.create(name: nameStr, description: descField.text)
+
+                let realm = try! Realm()
+                
+                try! realm.write {
+                    realm.add(newNote)
+                }
+                toggleModal()
+            }
+        } else {
+            continueButton.hideLoading()
         }
+    }
+    private func closeModalWithInterval() {
+        toggleModal()
     }
 }

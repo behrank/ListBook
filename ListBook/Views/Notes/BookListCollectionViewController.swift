@@ -19,8 +19,8 @@ class NoteListCollectionViewController: BaseCollectionViewController {
         
         collectionView?.register(NoteCollectionViewCell.self, forCellWithReuseIdentifier: "\(NoteCollectionViewCell.self)")
         collectionView?.dataSource = dataSource
-        collectionView?.backgroundColor = AppTheme.current.background
-        
+        collectionView?.backgroundColor = AppTheme.current.collectionViewBackground
+        collectionView?.delegate = self
         setupNavigationBar()
     }
 }
@@ -35,8 +35,10 @@ extension NoteListCollectionViewController {
         modal.toggleModal()
     }
 }
-extension NoteListCollectionViewController {
-    
+// MARK: CollectionView cell
+extension NoteListCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 100)
+    }
 }
-
 

@@ -24,12 +24,15 @@ class NoteCollectionViewCell: UICollectionViewCell {
     }()
     
     func setup(cellData: Note) {
+        contentView.backgroundColor = AppTheme.current.collectionCellBackground
         contentView.addSubviews(views: titleLabel, addDateLabel)
-        
-        contentView.addConstraintsWithFormat(format: "V:|-8-[v0]-4-[v1]", views: titleLabel,addDateLabel)
-        contentView.addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: titleLabel)
-        contentView.addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: addDateLabel)
+        contentView.addConstraintsWithFormat(format: "V:|-16-[v0]-4-[v1]", views: titleLabel,addDateLabel)
+        contentView.addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: titleLabel)
+        contentView.addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: addDateLabel)
         
         addDateLabel.addHeight(20)
+        
+        titleLabel.text = cellData.name
+        addDateLabel.text = "1234"
     }
 }

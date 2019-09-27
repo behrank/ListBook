@@ -12,8 +12,8 @@ class DefaultFlowLayout: UICollectionViewFlowLayout {
     
     override init() {
         super.init()
-        minimumLineSpacing = 0
-        scrollDirection = .horizontal
+        minimumLineSpacing = 16
+        scrollDirection = .vertical
     }
     
     required init?(coder: NSCoder) {

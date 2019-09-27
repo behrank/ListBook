@@ -18,7 +18,7 @@ class LandingViewController: BaseViewController {
     
     lazy var continueButton: UIButton = {
         var button = UIButton(frame: .zero)
-        button.backgroundColor = AppTheme.current.defaultButtonColor
+        button.backgroundColor = AppTheme.current.buttonBackgroundColor
         button.setTitle("Continue", for: UIControl.State.normal)
         button.titleLabel?.textColor = AppTheme.current.textColor
         return button

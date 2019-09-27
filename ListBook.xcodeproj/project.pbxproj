@@ -16,6 +16,9 @@
 		0FBC97DD233DE34B0019A72D /* LBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97DC233DE34B0019A72D /* LBTextField.swift */; };
 		0FBC97E1233DE5110019A72D /* LBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97E0233DE5110019A72D /* LBButton.swift */; };
 		0FBC97E3233DECED0019A72D /* LBTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97E2233DECED0019A72D /* LBTextView.swift */; };
+		0FBC97EB233E01370019A72D /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97EA233E01370019A72D /* Object.swift */; };
+		0FBC97F1233E1DB50019A72D /* NoteListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97F0233E1DB50019A72D /* NoteListDelegate.swift */; };
+		0FBC97F3233E1DE60019A72D /* BaseCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97F2233E1DE60019A72D /* BaseCollectionViewDelegate.swift */; };
 		0FC0B27A233CED7700086405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0B279233CED7700086405 /* AppDelegate.swift */; };
 		0FC0B27F233CED7700086405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC0B27D233CED7700086405 /* Main.storyboard */; };
 		0FC0B281233CED7800086405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC0B280233CED7800086405 /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 		0FBC97DC233DE34B0019A72D /* LBTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTextField.swift; sourceTree = "<group>"; };
 		0FBC97E0233DE5110019A72D /* LBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBButton.swift; sourceTree = "<group>"; };
 		0FBC97E2233DECED0019A72D /* LBTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTextView.swift; sourceTree = "<group>"; };
+		0FBC97EA233E01370019A72D /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		0FBC97F0233E1DB50019A72D /* NoteListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListDelegate.swift; sourceTree = "<group>"; };
+		0FBC97F2233E1DE60019A72D /* BaseCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		0FC0B276233CED7700086405 /* ListBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC0B279233CED7700086405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC0B27E233CED7700086405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,6 +138,14 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		0FBC97EF233E1DA40019A72D /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				0FBC97F0233E1DB50019A72D /* NoteListDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		0FC0B26D233CED7700086405 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +194,7 @@
 			children = (
 				0FC0B28D233CEE9600086405 /* Base */,
 				0FBC97CA233D1C2F0019A72D /* Datasources */,
+				0FBC97EF233E1DA40019A72D /* Delegates */,
 				0FBC97CD233D1DF00019A72D /* Layouts */,
 				0FBC97D2233D20750019A72D /* Realm */,
 				0FBC97DB233DE32F0019A72D /* UIView */,
@@ -194,6 +209,7 @@
 				0FC0B28F233CEE9600086405 /* BaseViewController.swift */,
 				0FC0B290233CEE9600086405 /* BaseNavigationController.swift */,
 				0FBC97D3233D268F0019A72D /* BaseDataSource.swift */,
+				0FBC97F2233E1DE60019A72D /* BaseCollectionViewDelegate.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -231,6 +247,7 @@
 				0FC0B299233CEE9700086405 /* UIApplication+Extensions.swift */,
 				0FC0B297233CEE9700086405 /* UIButton+Extensions.swift */,
 				0FC0B298233CEE9700086405 /* UIView+Extensions.swift */,
+				0FBC97EA233E01370019A72D /* Object.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -392,7 +409,9 @@
 				0FC0B29B233CEE9700086405 /* BaseViewController.swift in Sources */,
 				0FC0B2A9233CEEC400086405 /* Controllers.swift in Sources */,
 				0FC0B2A0233CEE9700086405 /* UIView+Extensions.swift in Sources */,
+				0FBC97F3233E1DE60019A72D /* BaseCollectionViewDelegate.swift in Sources */,
 				0FBC97CF233D1E010019A72D /* DefaultFlowLayout.swift in Sources */,
+				0FBC97F1233E1DB50019A72D /* NoteListDelegate.swift in Sources */,
 				0FC0B2A8233CEEC400086405 /* Logger.swift in Sources */,
 				0FBC97E3233DECED0019A72D /* LBTextView.swift in Sources */,
 				0FC0B29C233CEE9700086405 /* BaseNavigationController.swift in Sources */,
@@ -400,6 +419,7 @@
 				0FC0B29D233CEE9700086405 /* LandingViewController.swift in Sources */,
 				0FC0B27A233CED7700086405 /* AppDelegate.swift in Sources */,
 				0FC0B2AA233CEEC400086405 /* Theme.swift in Sources */,
+				0FBC97EB233E01370019A72D /* Object.swift in Sources */,
 				0FBC97D1233D20710019A72D /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

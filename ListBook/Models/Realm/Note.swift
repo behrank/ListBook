@@ -18,4 +18,16 @@ class Note: Object {
     override static func primaryKey() -> String? {
         return "id"
     }
+    
+    static func create(name: String, description: String ) -> Note {
+        let note = Note()
+        note.id = generateId()
+        note.name = name
+        note.noteDetail = description
+        
+        let currentTimeAsInterval = generateDate()
+        note.addInterval = currentTimeAsInterval
+        note.updateInterval = currentTimeAsInterval
+        return note
+    }
 }

@@ -39,7 +39,7 @@ class BaseDataSource: NSObject {
 extension BaseDataSource {
     private func fetchObjects(for object: Object.Type) {
         let realm = try! Realm()
-        let listOfObjects = realm.objects(object.self)
+        listOfObjects = realm.objects(object.self)
     }
     private func setupDataSource() {
         
@@ -54,12 +54,14 @@ extension BaseDataSource {
             case .initial:
                 DispatchQueue.main.async {
                     collectionView.reloadData()
+                    Logger.info(message: "CollectionView data source initialized")
                 }
             case .update(_, let deletions, let insertions, let modifications):
                 DispatchQueue.main.async {
                     collectionView.deleteItems(at: deletions.map({ IndexPath(row: $0, section: 0)}))
                     collectionView.insertItems(at: insertions.map({ IndexPath(row: $0, section: 0)}))
                     collectionView.reloadItems(at: modifications.map({ IndexPath(row: $0, section: 0)}))
+                    Logger.info(message: "CollectionView updated")
                 }
             case .error(let error):
                 Logger.info(message: "\(error)")

@@ -30,7 +30,7 @@ class NoteCollectionViewCell: UICollectionViewCell {
         contentView.addConstraintsWithFormat(format: "V:|-16-[v0]-4-[v1]", views: titleLabel,addDateLabel)
         contentView.addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: titleLabel)
         contentView.addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: addDateLabel)
-        
+
         addDateLabel.addHeight(20)
         
         titleLabel.text = cellData.name

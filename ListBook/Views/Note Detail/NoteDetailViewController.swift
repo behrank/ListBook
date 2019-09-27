@@ -144,7 +144,10 @@ extension NoteDetailViewController {
                     currentNote.updateInterval = Note.generateDate()
                     realm.add(currentNote)
                 }
-                self.navigationController?.popViewController(animated: true)
+
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                    self.navigationController?.popViewController(animated: true)
+                })
             }
         } else {
             continueButton.hideLoading()

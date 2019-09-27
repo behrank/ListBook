@@ -3,12 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FBC97CC233D1C770019A72D /* NoteListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97CB233D1C770019A72D /* NoteListDataSource.swift */; };
+		0FBC97CF233D1E010019A72D /* DefaultFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97CE233D1E010019A72D /* DefaultFlowLayout.swift */; };
+		0FBC97D1233D20710019A72D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97D0233D20710019A72D /* Note.swift */; };
+		0FBC97D4233D268F0019A72D /* BaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97D3233D268F0019A72D /* BaseDataSource.swift */; };
+		0FBC97D7233D2E0F0019A72D /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97D6233D2E0F0019A72D /* NoteCollectionViewCell.swift */; };
+		0FBC97DA233D32AE0019A72D /* NewNoteModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97D9233D32AE0019A72D /* NewNoteModalView.swift */; };
+		0FBC97DD233DE34B0019A72D /* LBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97DC233DE34B0019A72D /* LBTextField.swift */; };
+		0FBC97E1233DE5110019A72D /* LBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97E0233DE5110019A72D /* LBButton.swift */; };
+		0FBC97E3233DECED0019A72D /* LBTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC97E2233DECED0019A72D /* LBTextView.swift */; };
 		0FC0B27A233CED7700086405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0B279233CED7700086405 /* AppDelegate.swift */; };
-		0FC0B27C233CED7700086405 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0B27B233CED7700086405 /* ViewController.swift */; };
 		0FC0B27F233CED7700086405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC0B27D233CED7700086405 /* Main.storyboard */; };
 		0FC0B281233CED7800086405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC0B280233CED7800086405 /* Assets.xcassets */; };
 		0FC0B284233CED7800086405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC0B282233CED7800086405 /* LaunchScreen.storyboard */; };
@@ -16,7 +24,7 @@
 		0FC0B29B233CEE9700086405 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0B28F233CEE9600086405 /* BaseViewController.swift */; };
 		0FC0B29C233CEE9700086405 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0B290233CEE9600086405 /* BaseNavigationController.swift */; };
 		0FC0B29D233CEE9700086405 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0B293233CEE9600086405 /* LandingViewController.swift */; };
-		0FC0B29E233CEE9700086405 /* NotesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0B295233CEE9600086405 /* NotesCollectionViewController.swift */; };
+		0FC0B29E233CEE9700086405 /* BookListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0B295233CEE9600086405 /* BookListCollectionViewController.swift */; };
 		0FC0B29F233CEE9700086405 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0B297233CEE9700086405 /* UIButton+Extensions.swift */; };
 		0FC0B2A0233CEE9700086405 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0B298233CEE9700086405 /* UIView+Extensions.swift */; };
 		0FC0B2A1233CEE9700086405 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0B299233CEE9700086405 /* UIApplication+Extensions.swift */; };
@@ -29,9 +37,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FBC97CB233D1C770019A72D /* NoteListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListDataSource.swift; sourceTree = "<group>"; };
+		0FBC97CE233D1E010019A72D /* DefaultFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFlowLayout.swift; sourceTree = "<group>"; };
+		0FBC97D0233D20710019A72D /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		0FBC97D3233D268F0019A72D /* BaseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataSource.swift; sourceTree = "<group>"; };
+		0FBC97D6233D2E0F0019A72D /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		0FBC97D9233D32AE0019A72D /* NewNoteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteModalView.swift; sourceTree = "<group>"; };
+		0FBC97DC233DE34B0019A72D /* LBTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTextField.swift; sourceTree = "<group>"; };
+		0FBC97E0233DE5110019A72D /* LBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBButton.swift; sourceTree = "<group>"; };
+		0FBC97E2233DECED0019A72D /* LBTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTextView.swift; sourceTree = "<group>"; };
 		0FC0B276233CED7700086405 /* ListBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC0B279233CED7700086405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0FC0B27B233CED7700086405 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0FC0B27E233CED7700086405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FC0B280233CED7800086405 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FC0B283233CED7800086405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,7 +56,7 @@
 		0FC0B28F233CEE9600086405 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0FC0B290233CEE9600086405 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		0FC0B293233CEE9600086405 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
-		0FC0B295233CEE9600086405 /* NotesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesCollectionViewController.swift; sourceTree = "<group>"; };
+		0FC0B295233CEE9600086405 /* BookListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListCollectionViewController.swift; sourceTree = "<group>"; };
 		0FC0B297233CEE9700086405 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		0FC0B298233CEE9700086405 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		0FC0B299233CEE9700086405 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
@@ -66,6 +82,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FBC97CA233D1C2F0019A72D /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				0FBC97CB233D1C770019A72D /* NoteListDataSource.swift */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
+		0FBC97CD233D1DF00019A72D /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				0FBC97CE233D1E010019A72D /* DefaultFlowLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		0FBC97D2233D20750019A72D /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				0FBC97D0233D20710019A72D /* Note.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		0FBC97D5233D2DFC0019A72D /* Collection Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0FBC97D6233D2E0F0019A72D /* NoteCollectionViewCell.swift */,
+			);
+			path = "Collection Cells";
+			sourceTree = "<group>";
+		};
+		0FBC97D8233D329A0019A72D /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				0FBC97D9233D32AE0019A72D /* NewNoteModalView.swift */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		0FBC97DB233DE32F0019A72D /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				0FBC97E0233DE5110019A72D /* LBButton.swift */,
+				0FBC97DC233DE34B0019A72D /* LBTextField.swift */,
+				0FBC97E2233DECED0019A72D /* LBTextView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		0FC0B26D233CED7700086405 = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +159,6 @@
 				0FC0B2A2233CEEC400086405 /* Utilities */,
 				0FC0B291233CEE9600086405 /* Views */,
 				0FC0B279233CED7700086405 /* AppDelegate.swift */,
-				0FC0B27B233CED7700086405 /* ViewController.swift */,
 				0FC0B27D233CED7700086405 /* Main.storyboard */,
 				0FC0B280233CED7800086405 /* Assets.xcassets */,
 				0FC0B282233CED7800086405 /* LaunchScreen.storyboard */,
@@ -114,6 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				0FC0B28D233CEE9600086405 /* Base */,
+				0FBC97CA233D1C2F0019A72D /* Datasources */,
+				0FBC97CD233D1DF00019A72D /* Layouts */,
+				0FBC97D2233D20750019A72D /* Realm */,
+				0FBC97DB233DE32F0019A72D /* UIView */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +193,7 @@
 				0FC0B28E233CEE9600086405 /* BaseCollectionViewController.swift */,
 				0FC0B28F233CEE9600086405 /* BaseViewController.swift */,
 				0FC0B290233CEE9600086405 /* BaseNavigationController.swift */,
+				0FBC97D3233D268F0019A72D /* BaseDataSource.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -131,7 +201,9 @@
 		0FC0B291233CEE9600086405 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0FBC97D5233D2DFC0019A72D /* Collection Cells */,
 				0FC0B292233CEE9600086405 /* Landing */,
+				0FBC97D8233D329A0019A72D /* Modals */,
 				0FC0B294233CEE9600086405 /* Notes */,
 			);
 			path = Views;
@@ -148,7 +220,7 @@
 		0FC0B294233CEE9600086405 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				0FC0B295233CEE9600086405 /* NotesCollectionViewController.swift */,
+				0FC0B295233CEE9600086405 /* BookListCollectionViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -156,9 +228,9 @@
 		0FC0B296233CEE9700086405 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0FC0B299233CEE9700086405 /* UIApplication+Extensions.swift */,
 				0FC0B297233CEE9700086405 /* UIButton+Extensions.swift */,
 				0FC0B298233CEE9700086405 /* UIView+Extensions.swift */,
-				0FC0B299233CEE9700086405 /* UIApplication+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -180,7 +252,6 @@
 				781F84E3F10A9FAF71F52033 /* Pods-ListBook.debug.xcconfig */,
 				9DB16A9EA2B35B4401B6DCC7 /* Pods-ListBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -310,18 +381,26 @@
 				0FC0B2A1233CEE9700086405 /* UIApplication+Extensions.swift in Sources */,
 				0FC0B2A7233CEEC400086405 /* Constants.swift in Sources */,
 				0FC0B29A233CEE9700086405 /* BaseCollectionViewController.swift in Sources */,
+				0FBC97E1233DE5110019A72D /* LBButton.swift in Sources */,
+				0FBC97D4233D268F0019A72D /* BaseDataSource.swift in Sources */,
 				0FC0B29F233CEE9700086405 /* UIButton+Extensions.swift in Sources */,
+				0FBC97DA233D32AE0019A72D /* NewNoteModalView.swift in Sources */,
 				0FC0B2AC233CEED800086405 /* ListBookApp.swift in Sources */,
+				0FBC97DD233DE34B0019A72D /* LBTextField.swift in Sources */,
+				0FBC97D7233D2E0F0019A72D /* NoteCollectionViewCell.swift in Sources */,
+				0FBC97CC233D1C770019A72D /* NoteListDataSource.swift in Sources */,
 				0FC0B29B233CEE9700086405 /* BaseViewController.swift in Sources */,
 				0FC0B2A9233CEEC400086405 /* Controllers.swift in Sources */,
 				0FC0B2A0233CEE9700086405 /* UIView+Extensions.swift in Sources */,
-				0FC0B27C233CED7700086405 /* ViewController.swift in Sources */,
+				0FBC97CF233D1E010019A72D /* DefaultFlowLayout.swift in Sources */,
 				0FC0B2A8233CEEC400086405 /* Logger.swift in Sources */,
+				0FBC97E3233DECED0019A72D /* LBTextView.swift in Sources */,
 				0FC0B29C233CEE9700086405 /* BaseNavigationController.swift in Sources */,
-				0FC0B29E233CEE9700086405 /* NotesCollectionViewController.swift in Sources */,
+				0FC0B29E233CEE9700086405 /* BookListCollectionViewController.swift in Sources */,
 				0FC0B29D233CEE9700086405 /* LandingViewController.swift in Sources */,
 				0FC0B27A233CED7700086405 /* AppDelegate.swift in Sources */,
 				0FC0B2AA233CEEC400086405 /* Theme.swift in Sources */,
+				0FBC97D1233D20710019A72D /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

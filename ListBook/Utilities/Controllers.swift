@@ -18,7 +18,7 @@ enum Controller {
         case .landing:
             return BaseNavigationController(rootViewController: LandingViewController())
         case .notes:
-            return NotesCollectionViewController()
+            return BaseNavigationController(rootViewController: NoteListCollectionViewController(collectionViewLayout: ListBookCollectionViewLayout.defaultFlow.layout))
         }
     }
 }

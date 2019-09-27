@@ -14,9 +14,16 @@ enum AppTheme {
     
     var textColor: UIColor {
         if #available(iOS 13.0, *) {
-            return .white
+            return .label
         } else {
             return .white
+        }
+    }
+    var subTextColor: UIColor {
+        if #available(iOS 13.0, *) {
+            return .secondaryLabel
+        } else {
+            return .lightGray
         }
     }
     var menuTextColor: UIColor {
@@ -55,8 +62,17 @@ enum AppTheme {
               return .white
           }
     }
-    
+    var wrapperBackground: UIColor {
+        if #available(iOS 13.0, *) {
+              return .lightGray
+          } else {
+              return .lightGray
+          }
+    }
     var defaultButtonColor: UIColor {
         return UIColor(red:1.00, green:0.66, blue:0.00, alpha:1.0)
+    }
+    var buttonBackgroundColor: UIColor {
+        return UIColor(red:0.00, green:0.70, blue:1.00, alpha:1.0)
     }
 }

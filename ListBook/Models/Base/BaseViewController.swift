@@ -10,8 +10,7 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLoad() {
         setupUI()
     }
     

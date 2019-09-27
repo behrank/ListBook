@@ -6,7 +6,7 @@
 //  Copyright © 2019 Can Behran Kankul. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum ServerType {
     case production
@@ -23,4 +23,21 @@ enum ServerType {
             return ""
         }
     }
+}
+
+enum ListBookCollectionViewLayout {
+    case defaultFlow
+    
+    var layout: UICollectionViewLayout {
+        switch self {
+        case .defaultFlow:
+            return DefaultFlowLayout()
+        default:
+            return UICollectionViewLayout()
+        }
+    }
+}
+
+enum ValidationStatus {
+    case valid, notValid
 }

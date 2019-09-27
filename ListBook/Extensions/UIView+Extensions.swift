@@ -112,4 +112,16 @@ extension UIView {
         layer.cornerRadius = radius
         layer.masksToBounds = true
     }
+    func addBorderColor(borderColor: UIColor) {
+        setBorderColor(color: .red)
+    }
+    func removeBorderColor() {
+        setBorderColor(color: .clear)
+    }
+    private func setBorderColor(color: UIColor) {
+        self.layer.borderWidth = 1
+        UIView.animate(withDuration: 0.1) {
+            self.layer.borderColor = color.cgColor
+        }
+    }
 }

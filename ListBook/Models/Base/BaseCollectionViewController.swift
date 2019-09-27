@@ -9,7 +9,7 @@
 import UIKit
 
 class BaseCollectionViewController: UICollectionViewController {
-    
+
     override func viewDidLoad() {
         setupUI()
     }

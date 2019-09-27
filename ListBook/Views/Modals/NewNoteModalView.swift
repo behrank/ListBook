@@ -26,11 +26,17 @@ class NewNoteModalView: UIView {
         return view
     }()
     
+    lazy var closeImage: UIImageView = {
+        var imageView = UIImageView(frame: .zero)
+        imageView.image = UIImage(named: "close")
+        return imageView
+    }()
+    
     lazy var titleLabel: UILabel = {
         var title = UILabel(frame: .zero)
         title.textColor = AppTheme.current.textColor
         title.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
-        title.text = "Yeni Not Ekle"
+        title.text = "New Note"
         title.textAlignment = NSTextAlignment.center
         return title
     }()
@@ -124,7 +130,7 @@ class NewNoteModalView: UIView {
         
         titleLabel.addHeight(20)
         
-        let gestureRec = UITapGestureRecognizer(target: nil, action: #selector(closeKeyboard))
+        let gestureRec = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         wrapperView.addGestureRecognizer(gestureRec)
         wrapperView.isUserInteractionEnabled = true
     }
@@ -143,8 +149,20 @@ class NewNoteModalView: UIView {
         contentView.addSubviews(views: continueButton)
         contentView.addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: continueButton)
         contentView.addConstraintsWithFormat(format: "V:[v0]-8-|", views: continueButton)
+        
         continueButton.addHeight(40)
         continueButton.addTarget(self, action: #selector(validateAndSaveNewNote), for: UIControl.Event.touchDown)
+        
+        contentView.addSubviews(views: closeImage)
+        contentView.addConstraintsWithFormat(format: "H:[v0]-8-|", views: closeImage)
+        contentView.addConstraintsWithFormat(format: "V:|-8-[v0]", views: closeImage)
+        
+        closeImage.addWidth(20)
+        closeImage.addHeight(20)
+        
+        let gestureRec = UITapGestureRecognizer(target: self, action: #selector(closeModal))
+        closeImage.addGestureRecognizer(gestureRec)
+        closeImage.isUserInteractionEnabled = true
     }
 }
 extension NewNoteModalView {
@@ -169,11 +187,18 @@ extension NewNoteModalView {
             continueButton.hideLoading()
         }
     }
-    private func closeModalWithInterval() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+    @objc private func closeModalWithInterval(time: Int = 1) {
+        
+        nameField.text = ""
+        descField.text = ""
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(time), execute: {
             self.toggleModal()
         })
     }
+    @objc private func closeModal() {
+            self.toggleModal()
+       }
     @objc func closeKeyboard() {
         self.endEditing(true)
     }

@@ -98,7 +98,7 @@ class NoteDetailViewController: BaseViewController {
         
         setupNavigationBar()
         
-        let gestureRec = UITapGestureRecognizer(target: nil, action: #selector(closeKeyboard))
+        let gestureRec = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         view.addGestureRecognizer(gestureRec)
         view.isUserInteractionEnabled = true
     }

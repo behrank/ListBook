@@ -89,6 +89,7 @@ class NoteDetailViewController: BaseViewController {
         nameField.addHeight(40)
         descField.addHeight(100)
         addDateLabel.addHeight(20)
+        
         continueButton.alignCenterVerticalyToSuperview()
         continueButton.addHeight(40)
         continueButton.addWidth(200)
@@ -96,6 +97,10 @@ class NoteDetailViewController: BaseViewController {
         continueButton.addTarget(self, action: #selector(validateAndUpdateNewNote), for: UIControl.Event.touchDown)
         
         setupNavigationBar()
+        
+        let gestureRec = UITapGestureRecognizer(target: nil, action: #selector(closeKeyboard))
+        view.addGestureRecognizer(gestureRec)
+        view.isUserInteractionEnabled = true
     }
     
     func setViewData(viewData: Note) {
@@ -144,6 +149,9 @@ extension NoteDetailViewController {
         } else {
             continueButton.hideLoading()
         }
+    }
+    @objc func closeKeyboard() {
+        self.view.endEditing(true)
     }
 }
 

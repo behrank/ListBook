@@ -123,6 +123,10 @@ class NewNoteModalView: UIView {
         contentView.addConstraintsWithFormat(format: "V:|-16-[v0]", views: titleLabel)
         
         titleLabel.addHeight(20)
+        
+        let gestureRec = UITapGestureRecognizer(target: nil, action: #selector(closeKeyboard))
+        wrapperView.addGestureRecognizer(gestureRec)
+        wrapperView.isUserInteractionEnabled = true
     }
     private func addTextUI() {
         contentView.addSubviews(views: nameField, detailLabel, descField)
@@ -169,5 +173,8 @@ extension NewNoteModalView {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
             self.toggleModal()
         })
+    }
+    @objc func closeKeyboard() {
+        self.endEditing(true)
     }
 }

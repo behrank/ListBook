@@ -39,7 +39,7 @@ class BaseDataSource: NSObject {
 extension BaseDataSource {
     private func fetchObjects(for object: Object.Type) {
         let realm = try! Realm()
-        listOfObjects = realm.objects(object.self)
+        listOfObjects = realm.objects(object.self).sorted(byKeyPath: "updateInterval", ascending: false)
     }
     private func setupDataSource() {
         

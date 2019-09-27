@@ -8,7 +8,12 @@
 
 import UIKit
 
+protocol CollectionViewActionDelegate: class {
+    func didTapCellAt(indexPath: IndexPath)
+}
+
 class BaseCollectionViewDelegate: NSObject {
     
+    weak var delegate: CollectionViewActionDelegate?
 }
 

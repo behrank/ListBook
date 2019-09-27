@@ -14,6 +14,7 @@ class NoteCollectionViewCell: UICollectionViewCell {
     lazy var titleLabel: UILabel = {
         var title = UILabel(frame: .zero)
         title.textColor = AppTheme.current.textColor
+        title.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.regular)
         return title
     }()
     
@@ -33,6 +34,10 @@ class NoteCollectionViewCell: UICollectionViewCell {
         addDateLabel.addHeight(20)
         
         titleLabel.text = cellData.name
-        addDateLabel.text = "1234"
+        if cellData.addInterval == cellData.updateInterval {
+            addDateLabel.text = cellData.convertAddDateToString()
+        } else {
+            addDateLabel.text = "Updated: \(cellData.convertUpdateDateToString())"
+        }
     }
 }

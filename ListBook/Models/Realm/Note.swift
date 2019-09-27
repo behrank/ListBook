@@ -30,4 +30,17 @@ class Note: Object {
         note.updateInterval = currentTimeAsInterval
         return note
     }
+    
+    func convertAddDateToString() -> String {
+        let recordedDate = Date(timeIntervalSince1970: TimeInterval(self.addInterval))
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        return dateFormatter.string(from: recordedDate)
+    }
+    func convertUpdateDateToString() -> String {
+        let recordedDate = Date(timeIntervalSince1970: TimeInterval(self.updateInterval))
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        return dateFormatter.string(from: recordedDate)
+    }
 }

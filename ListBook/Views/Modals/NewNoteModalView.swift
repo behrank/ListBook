@@ -51,8 +51,16 @@ class NewNoteModalView: UIView {
         txtView.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.semibold)
         txtView.addRadius()
     
-        txtView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        txtView.textContainerInset = UIEdgeInsets(top: 8, left: 4, bottom: 8, right: 4)
         return txtView
+    }()
+    
+    lazy var detailLabel: UILabel = {
+        var title = UILabel(frame: .zero)
+        title.textColor = AppTheme.current.subTextColor
+        title.text = "Description"
+        title.font = UIFont.systemFont(ofSize: 14)
+        return title
     }()
     
     lazy var continueButton: LBButton = {
@@ -105,7 +113,7 @@ class NewNoteModalView: UIView {
         addConstraintsWithFormat(format: "V:|[v0]|", views: wrapperView)
         
         contentView.addWidth(250)
-        contentView.addHeight(250)
+        contentView.addHeight(270)
         
         contentView.alignCenterHorizontalyToSuperview()
         contentView.alignCenterVerticalyToSuperview()
@@ -117,11 +125,13 @@ class NewNoteModalView: UIView {
         titleLabel.addHeight(20)
     }
     private func addTextUI() {
-        contentView.addSubviews(views: nameField, descField)
-        contentView.addConstraintsWithFormat(format: "V:[v0]-16-[v1]-8-[v2]", views: titleLabel, nameField, descField)
+        contentView.addSubviews(views: nameField, detailLabel, descField)
+        contentView.addConstraintsWithFormat(format: "V:[v0]-16-[v1]-8-[v2]-4-[v3]", views: titleLabel, nameField, detailLabel, descField)
         contentView.addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: nameField)
+        contentView.addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: detailLabel)
         contentView.addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: descField)
         
+        detailLabel.addHeight(20)
         nameField.addHeight(40)
         descField.addHeight(90)
     }
@@ -149,13 +159,15 @@ extension NewNoteModalView {
                 try! realm.write {
                     realm.add(newNote)
                 }
-                toggleModal()
+                self.closeModalWithInterval()
             }
         } else {
             continueButton.hideLoading()
         }
     }
     private func closeModalWithInterval() {
-        toggleModal()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            self.toggleModal()
+        })
     }
 }
